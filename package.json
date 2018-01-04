@@ -4,8 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "better-npm-run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "betterScripts": {
+    "dev": {
+      "command": "nodemon bin/start.js",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    }
+  },
   "author": "Chen Fang <chenfanggm@hotmail.com> (https://chenfang.me)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "better-npm-run": "^0.1.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4",
+    "ws": "^3.3.3"
+  }
 }
